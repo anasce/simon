@@ -40,6 +40,10 @@ function igra() {
             if (userClickedPattern[ul - 1] != gamePattern[ul - 1]) {
                 $("h1").text(level + " Крај игре Притисните било који тастер за наставак ");
                 var audio = new Audio("sounds/wrong.mp3");
+                document.body.style.background = "#fde4cf";
+                setTimeout(function() {
+                    document.body.style.background = "white";
+                }, 700);
                 audio.play();
                 igra_traje = false;
             } else if (ul >= gamePattern.length) {
